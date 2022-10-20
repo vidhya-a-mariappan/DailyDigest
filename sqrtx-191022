@@ -1,0 +1,11 @@
+class Solution {
+    public int mySqrt(int x) {
+        double sqrt=x;  
+    while (sqrt*sqrt > x)
+        sqrt = (sqrt + x/sqrt) / 2;
+    return (int)sqrt;
+        
+    }
+}
+//not accepting this code
+//time limit exceeds
