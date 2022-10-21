@@ -1,0 +1,21 @@
+class Solution {
+    public boolean isHappy(int n) {
+        int temp=n,result=0,rem=0;
+        while(temp>0)
+        {
+            rem=temp%10;
+            result+=Math.pow(rem,2);
+            temp/=10;
+            if(temp<=0 && result>9)
+            {
+                temp=result;
+                result=0;
+            }
+        }
+        if (result==1)
+            return true;
+        else
+            return false;             
+        }
+        
+    }
